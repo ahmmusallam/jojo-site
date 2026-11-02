@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["H9D554Z9P4.com.ahmusallam.Jojo"],
+        "components": [
+          { "/": "/join", "comment": "Partner invite. The secret is after the #, which never reaches this server." }
+        ]
+      }
+    ]
+  }
+}
