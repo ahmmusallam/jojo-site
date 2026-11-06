@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jojo Privacy Policy</title>
-<meta name="description" content="How Jojo handles your family's health records: no account, and your records stay on your phone.">
+<meta name="description" content="How Jojo handles your family's health records: they stay on your phone, and if you share them with your partner, they travel encrypted.">
 <meta name="theme-color" content="#EBE8E3">
 <link rel="canonical" href="https://jojohealth.app/privacy/">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
@@ -61,15 +61,19 @@ a{color:#6E6A64}a:hover{color:#1D1C1A}
 
 <main class="pol hl">
 <h1>Jojo Privacy Policy</h1>
-<p><em>Last updated: 3 November 2026</em></p>
-<div class="lede"><p>Jojo helps parents keep their family's health records (vaccinations, prescriptions and lab
-results) in one place on their iPhone or Android phone. This policy explains what Jojo does with that
-information. In short: <strong>there's no account, and your family's health records stay on your
-phone. We never receive them.</strong></p></div>
+<p><em>Last updated: 6 November 2026</em></p>
+<div class="lede"><p>Jojo helps parents keep their family's health records — vaccinations, prescriptions and lab
+results — in one place on their iPhone or Android phone. This policy explains what Jojo does with that
+information. In short: <strong>your family's health records stay on your phone, and we can't read them.</strong>
+There's no account unless you choose to share your records with your partner; then they travel
+encrypted, and we still can't read them.</p></div>
+<h2>Who we are</h2>
+<p>Jojo is made by <strong>Ahmed Musallam</strong>, 6th of October City, Giza, Egypt. Contact:
+<strong><a href="mailto:ahmed.hamdy.musallam@gmail.com">ahmed.hamdy.musallam@gmail.com</a></strong>.</p>
 <h2>What stays on your phone</h2>
 <ul>
 <li><strong>Family members:</strong> names or nicknames, dates of birth, and the avatar you choose.</li>
-<li><strong>Health records:</strong> vaccinations, medicines and prescriptions, lab results, fevers (temperatures and medicines given), and the photos
+<li><strong>Health records:</strong> vaccinations, medicines and prescriptions, lab results, fevers (temperatures and medicines given, on iPhone only for now), and the photos
   and PDFs you add.</li>
 <li><strong>Reading documents:</strong> when you add a photo or PDF, Jojo reads it <strong>on your phone</strong>
   (on iPhone, Apple's on-device text recognition; on Android, a text recognition engine that's
@@ -84,9 +88,39 @@ phone is locked. It's included in your iPhone's own iCloud or computer backup (A
 service, set up by you in iOS), so it moves to a new iPhone you set up from that backup. Jojo
 itself never receives it.</p>
 <p>On Android 12 and newer, your records and settings can be part of your phone's Google backup (Google's service, set up by you in Android), encrypted with your screen lock. Photos and PDFs aren't in that backup. Moving directly from your old phone to a new one also brings them. On older Android versions, nothing is backed up or moved. Jojo itself never receives any of this. Your usage data ID never moves to a new phone.</p>
+<h2>A copy you save</h2>
+<p>You can choose to save a copy of your records as one file: Settings › Save a copy of your
+records. It's protected by a password you choose, and it goes only where you put it, such as
+iCloud Drive, a computer or a message to yourself. Those services' own terms apply to the file
+while it's with them. Jojo never receives the file or the password. Nobody, including us, can
+open the file without the password or recover a forgotten one.</p>
+<h2>Sharing with your partner (optional)</h2>
+<p>If you turn it on in Settings › Share with your partner, Jojo keeps your family's records in step
+between your phone and one other parent's. To do this:</p>
+<ul>
+<li><strong>You sign in</strong> with your email address (we send you a 6-digit code) or with Apple, where Jojo
+  offers it. Your partner joins with a one-time invite link you send them.</li>
+<li><strong>Your records are encrypted on your phone before they leave it</strong>, with a key that only your
+  family's phones have. Our server stores them encrypted, so <strong>we can't read your records</strong>:
+  not names, birth dates, medicines, vaccines, lab results, fevers, notes, photos or PDFs.</li>
+<li><strong>What our server can see:</strong> each parent's sign-in email address or Apple ID, that two accounts
+  share a family, how many items and files there are, roughly how big they are, when they
+  changed, and IP addresses in its logs.</li>
+<li><strong>Your recovery code</strong> is shown once, when you start sharing. It's the only way back to your
+  shared records if you lose both phones. We don't keep it, so nobody, including us, can recover
+  your records without it.</li>
+</ul>
+<p>When you leave sharing, your phone keeps its own copy of everything. If you remove your partner,
+their access ends at once and your phone makes a new key and recovery code, but they keep the
+copy already on their phone. When the last parent leaves, or you delete your account in the app,
+your family's data is deleted from our server. While you share, a deleted item stays on our
+server as an encrypted marker with no content, so that both phones learn of the deletion.</p>
+<p><strong>Providers:</strong> Supabase (database and file storage, EU — Ireland) and Resend (sends the sign-in
+code email).</p>
 <h2>Accounts</h2>
-<p>Jojo has no account and no sign-in. We never receive your email, phone number or name, and
-we have no server that stores your records.</p>
+<p>Without sharing, Jojo has no account and no sign-in, and we never receive your email, phone
+number or name. With sharing, your account is the sign-in described above, and it's used only
+for sharing.</p>
 <h2>How we learn what to improve</h2>
 <p>Only if you agree: Jojo asks once, and you can change your answer anytime in Settings ›
 Privacy and data › Share usage data. Until you agree, nothing is sent. If you agree, Jojo sends
@@ -100,13 +134,14 @@ documents or photos, and no one's name. There is no screen recording.</p>
 <p>Each event also says whether the country you chose in Jojo is Egypt, another country, or not
 chosen; which other country you picked stays on your phone. Jojo asks PostHog not to work out
 your location from your IP address.</p>
-<p><strong>Provider:</strong> PostHog (product analytics, EU, Frankfurt).</p>
+<p><strong>Provider:</strong> PostHog (product analytics, EU — Frankfurt).</p>
 <h2>What we don't do</h2>
 <ul>
 <li>We don't sell your data, show ads, or track you across apps or websites.</li>
 <li>We don't use advertising tools. The only analytics are the anonymous usage events described
   above.</li>
-<li>We don't share your family's information with anyone.</li>
+<li>We don't share your family's information with anyone. With sharing on, it goes only to your
+  partner's phone, encrypted, through our server.</li>
 <li>Jojo doesn't give medical advice. Vaccine schedules come from each country's published
   national schedule (today Egypt's Ministry of Health and VACSERA, shown only when your country
   is Egypt), and lab ranges and flags are shown as printed by the lab.</li>
@@ -115,7 +150,8 @@ your location from your IP address.</p>
 <ul>
 <li><strong>Turn usage data on or off</strong> anytime in Settings › Privacy and data › Share usage data.</li>
 <li><strong>Delete everything on your phone</strong> in Settings › Privacy and data › Delete all data.
-  Because we never receive your records, there's nothing of yours on our side to delete.</li>
+  Without sharing, there's nothing of yours on our side to delete.</li>
+<li><strong>Leave sharing or delete your account</strong> in Settings › Share with your partner.</li>
 </ul>
 <h2>Children</h2>
 <p>Jojo is for parents and guardians. Children don't use Jojo themselves; parents add their
