@@ -61,7 +61,7 @@ a{color:#6E6A64}a:hover{color:#1D1C1A}
 
 <main class="pol hl">
 <h1>Jojo Privacy Policy</h1>
-<p><em>Last updated: 11 November 2026</em></p>
+<p><em>Last updated: 18 November 2026</em></p>
 <div class="lede"><p>Jojo helps parents keep their family's health records — vaccinations, prescriptions and lab
 results — in one place on their iPhone or Android phone. This policy explains what Jojo does with that
 information. In short: <strong>your family's health records stay on your phone, and we can't read them.</strong>
@@ -70,7 +70,7 @@ encrypted, and we still can't read them.</p></div>
 <h2>What stays on your phone</h2>
 <ul>
 <li><strong>Family members:</strong> names or nicknames, dates of birth, and the avatar you choose.</li>
-<li><strong>Health records:</strong> vaccinations, medicines and prescriptions, lab results, fevers (temperatures and medicines given, on iPhone only for now), and the photos
+<li><strong>Health records:</strong> vaccinations, medicines and prescriptions, lab results, fevers (temperatures and medicines given, on iPhone only for now), growth measurements (weight, length or height and head size, on iPhone only for now), and the photos
   and PDFs you add.</li>
 <li><strong>Reading documents:</strong> when you add a photo or PDF, Jojo reads it <strong>on your phone</strong>
   (on iPhone, Apple's on-device text recognition; on Android, a text recognition engine that's
@@ -99,7 +99,7 @@ between your phone and one other parent's. To do this:</p>
   offers it. Your partner joins with a one-time invite link you send them.</li>
 <li><strong>Your records are encrypted on your phone before they leave it</strong>, with a key that only your
   family's phones have. Our server stores them encrypted, so <strong>we can't read your records</strong>:
-  not names, birth dates, medicines, vaccines, lab results, fevers, notes, photos or PDFs.</li>
+  not names, birth dates, medicines, vaccines, lab results, fevers, growth measurements, notes, photos or PDFs.</li>
 <li><strong>What our server can see:</strong> each parent's sign-in email address or Apple ID, that two accounts
   share a family, how many items and files there are, roughly how big they are, when they
   changed, and IP addresses in its logs.</li>
@@ -119,14 +119,18 @@ code email).</p>
 number or name. With sharing, your account is the sign-in described above, and it's used only
 for sharing.</p>
 <h2>How we learn what to improve</h2>
-<p>Anonymous counts: unless you turn them off in Settings › Privacy and data › Anonymous counts, Jojo counts how often things happen, such as a screen being opened, a record being added (with its type and how), or an app error (its kind only), and that the app was opened that day. These counts go to PostHog (hosted in the EU) with no ID of any kind, so they can't be linked to you, your phone or each other. Each one carries only the app version, the system version (such as 18), the country you chose, and the hour it happened. No device model, language or time zone, and no health information. Your IP address is seen when the app connects, and discarded. Jojo stops sending counts once you agree to share usage data, so nothing is counted twice.</p>
+<p>Anonymous counts: unless you turn them off in Settings › Privacy and data › Anonymous counts, Jojo counts how often things happen, such as a screen being opened, a record being added (with its type and how), a reminder being turned on, a setting being changed (Light or Dark, or the language chosen in Jojo), a Jojo Premium subscription being bought or restored (which plan and whether it went through, never a price), or an app error (its kind only), and that the app was opened that day. These counts go to PostHog (hosted in the EU) with no ID of any kind, so they can't be linked to you, your phone or each other. Each one carries only the app version, the system version (such as 18), the country you chose, and the hour it happened. No device model, phone language or time zone, and no health information. Your IP address is seen when the app connects, and discarded. Jojo stops sending counts once you agree to share usage data, so nothing is counted twice.</p>
 <p>Usage data, only if you agree: Jojo asks once, and you can change your answer anytime in Settings ›
 Privacy and data › Share usage data. Until you agree, nothing is sent. If you agree, Jojo sends
 anonymous usage events to PostHog (hosted in the EU): which
 screens you open, actions such as "a record was added" with its type (vaccine, medicine
 or lab report) and how (camera, photo or file, or typed in), whether sharing with your partner
 is used (an invite was created, a partner joined, sharing was turned off, or a sync failed and in
-which general way, such as being offline), and app errors. They are tied to a random ID
+which general way, such as being offline), whether reading a photo found something to fill in
+(never what it read), whether a reminder was turned on and notifications allowed, settings you
+change in Jojo (Light or Dark, the language chosen in Jojo), which language you use Jojo in and whether your
+phone's own language is English, Arabic or another (never your region), whether the Jojo Premium screen was opened and
+a subscription bought, cancelled or restored (never a price, your Apple Account or the purchase itself), and app errors. They are tied to a random ID
 created by the app, not to you.</p>
 <p>Like most analytics tools, PostHog also receives basic device details: the model and manufacturer, system version, language, time zone, carrier, network type, screen size and app version. It sees your IP address when the app connects, and discards it.</p>
 <p>They <strong>never</strong> include health information: no medicine, vaccine or lab names or values, no
@@ -136,6 +140,13 @@ you didn't choose one. This helps us decide which country's vaccine schedule to 
 only the country, never a city or anything more precise, and Jojo asks PostHog not to work out
 your location from your IP address.</p>
 <p><strong>Provider:</strong> PostHog (product analytics, EU — Frankfurt).</p>
+<h2>Jojo Premium (subscriptions)</h2>
+<p>Jojo Premium is bought through the App Store, and Apple handles the payment. Jojo never sees your card, your Apple
+Account or the price you paid. To know whether Premium is on, and whether you're a founding member (you first
+downloaded Jojo before Premium existed), Jojo asks Apple's StoreKit on your phone; nothing about it is sent to us.
+The only purchase information Jojo sends is in the counts and usage events above: whether a subscription was
+bought, cancelled or restored, and which plan (monthly or yearly), never tied to you. Cancel or manage your
+subscription in your iPhone's Settings › Apple Account › Subscriptions.</p>
 <h2>What we don't do</h2>
 <ul>
 <li>We don't sell your data, show ads, or track you across apps or websites.</li>
@@ -144,9 +155,8 @@ your location from your IP address.</p>
 <li>We don't share your family's information with anyone. With sharing on, it goes only to your
   partner's phone, encrypted, through our server.</li>
 <li>Jojo doesn't give medical advice. Vaccine schedules come from each country's published
-  national schedule (Egypt's Ministry of Health and VACSERA, Jordan's Ministry of Health, or
-  Algeria's Official Gazette, shown only when your country is that one), and lab ranges and flags
-  are shown as printed by the lab.</li>
+  national schedule (Egypt's Ministry of Health and VACSERA, Jordan's Ministry of Health, or Algeria's Official Gazette,
+  shown only when your country is that one), and lab ranges and flags are shown as printed by the lab.</li>
 </ul>
 <h2>Your choices</h2>
 <ul>
