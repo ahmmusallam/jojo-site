@@ -3,8 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- The invite secret is in this page's address, after the #. So this page has no scripts, analytics or outside requests. -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'; form-action 'none'; base-uri 'none'">
+<!-- The invite secret is in this page's address, after the #, and never reaches this server. One small script, allowed
+     by its hash, only copies the address to the clipboard when tapped: no analytics, no outside requests
+     (connect-src is none), nothing sent. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-XCtgoHQXx47OA6+H4Z3x7Kw3pn/m7C1/JcNakjoCTCo='; style-src 'unsafe-inline'; img-src 'self'; form-action 'none'; base-uri 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noindex">
 <title>Your Jojo invite</title>
@@ -19,36 +21,64 @@ h1{margin:0;font-size:40px;line-height:1.1;letter-spacing:-0.03em;font-weight:30
 [lang=ar] h1{letter-spacing:0;line-height:1.3}
 p,li{font-size:17px;line-height:1.55;color:#4A4743}
 p{margin:16px 0 0}
+li strong{color:#1D1C1A;font-weight:600}
 ol{margin:24px 0 0;padding-inline-start:22px}
-li+li{margin-top:10px}
-li::marker{color:#EE6A2F}
-a.btn{display:inline-flex;align-items:center;height:48px;margin-top:24px;padding:0 24px;border-radius:999px;background:#1D1C1A;color:#F6F5F2;font-size:16px;font-weight:500;text-decoration:none}
-a.btn:focus-visible{outline:2px solid #EE6A2F;outline-offset:3px}
-small{display:block;margin-top:24px;font-size:15px;line-height:1.5;color:#6E6A64}
+li+li{margin-top:22px}
+li::marker{color:#EE6A2F;font-weight:600}
+.btn{display:inline-flex;align-items:center;height:48px;margin-top:14px;padding:0 24px;border-radius:999px;border:0;background:#1D1C1A;color:#F6F5F2;font:inherit;font-size:16px;font-weight:500;text-decoration:none;cursor:pointer}
+.btn[hidden],.nolink[hidden]{display:none}
+.btn:focus-visible{outline:2px solid #EE6A2F;outline-offset:3px}
+.nolink{display:block;margin-top:8px;font-size:15px;color:#6E6A64}
+.box{margin-top:24px;padding:16px 18px;border-radius:18px;background:#F6F5F2;font-size:15px;line-height:1.5;color:#6E6A64}
+.box strong{display:block;color:#1D1C1A;font-weight:600;margin-bottom:2px}
+@media (prefers-color-scheme: dark){
+  body{background:#171614;color:#F2EFEA} p,li{color:#C9C4BC} li strong,.box strong{color:#F2EFEA}
+  .btn{background:#F2EFEA;color:#1D1C1A} .box{background:#211F1C;color:#B5B0A8} section+section{border-top-color:#34312D}
+}
 </style>
 </head>
 <body>
 <main>
 <section>
-  <h1>You’re invited to share Jojo</h1>
-  <p>Your partner wants to keep your children’s health records together with you.</p>
+  <h1>Your partner invited you to Jojo</h1>
+  <p>Keep your children’s vaccines, medicines and lab results together, on both your phones.</p>
   <ol>
-    <li>Install Jojo or update it to the latest version.</li>
-    <li>Come back and open your invite link again.</li>
+    <li><strong>Get Jojo.</strong> Free on the App Store.<br><a class="btn" href="https://apps.apple.com/eg/app/jojo-child-health-records/id6824950489" rel="noreferrer">Get Jojo on the App Store</a></li>
+    <li><strong>Copy your invite.</strong> Jojo will ask for it when you open it.<br><button class="btn copy" type="button" hidden data-done="Copied">Copy invite link</button><span class="nolink" hidden>Open this page from the invite link your partner sent you.</span></li>
+    <li><strong>Open Jojo and tap “I have an invite from my partner”.</strong> Paste the invite. You won’t need to add your children: you’ll see your partner’s.</li>
   </ol>
-  <a class="btn" href="https://apps.apple.com/eg/app/jojo-child-health-records/id6824950489" rel="noreferrer">Get Jojo on the App Store</a>
-  <small>The link works once and expires after 7 days. If it has expired, ask your partner for a new one.</small>
+  <div class="box"><strong>Already have Jojo?</strong> Update it, then tap the invite link in your partner’s message again. Or copy the invite and paste it in Settings › Share with your partner › I have an invite.</div>
+  <div class="box"><strong>Invite not working?</strong> Invites work once and end after 7 days. If Jojo says this one can’t be used, ask your partner to send a new one from Settings › Share with your partner.</div>
 </section>
 <section lang="ar" dir="rtl">
-  <h1>لقد تلقيت دعوة لمشاركة جوجو</h1>
-  <p>يرغب شريكك في أن تحتفظا معًا بالسجلات الصحية لأطفالكما.</p>
+  <h1>دعاك شريكك إلى جوجو</h1>
+  <p>احتفظا معًا بتطعيمات أطفالكما وأدويتهم ونتائج تحاليلهم على هاتفيكما.</p>
   <ol>
-    <li>ثبّت جوجو أو حدّثه إلى أحدث إصدار.</li>
-    <li>عُد وافتح رابط الدعوة مرة أخرى.</li>
+    <li><strong>احصل على جوجو.</strong> مجانًا على App Store.<br><a class="btn" href="https://apps.apple.com/eg/app/jojo-child-health-records/id6824950489" rel="noreferrer">احصل على جوجو من App Store</a></li>
+    <li><strong>انسخ دعوتك.</strong> سيطلبها جوجو عند فتحه.<br><button class="btn copy" type="button" hidden data-done="تم النسخ">نسخ رابط الدعوة</button><span class="nolink" hidden>افتح هذه الصفحة من رابط الدعوة الذي أرسله لك شريكك.</span></li>
+    <li><strong>افتح جوجو واضغط «لديّ دعوة من شريكي».</strong> الصق الدعوة. لن تحتاج إلى إضافة أطفالك: سترى أطفال شريكك.</li>
   </ol>
-  <a class="btn" href="https://apps.apple.com/eg/app/jojo-child-health-records/id6824950489" rel="noreferrer">احصل على جوجو من App Store</a>
-  <small>يعمل الرابط مرة واحدة وتنتهي صلاحيته بعد 7 أيام. إذا انتهت صلاحيته، فاطلب من شريكك رابطًا جديدًا.</small>
+  <div class="box"><strong>لديك جوجو بالفعل؟</strong> حدّثه، ثم اضغط رابط الدعوة في رسالة شريكك مرة أخرى. أو انسخ الدعوة والصقها في الإعدادات › المشاركة مع شريكك › لديّ دعوة.</div>
+  <div class="box"><strong>الدعوة لا تعمل؟</strong> تعمل الدعوة مرة واحدة وتنتهي بعد 7 أيام. إذا قال جوجو إنه لا يمكن استخدامها، فاطلب من شريكك إرسال دعوة جديدة من الإعدادات › المشاركة مع شريكك.</div>
 </section>
 </main>
+<script>(function(){
+  var ok = /[#&]i=[0-9a-f-]{36}/i.test(location.hash) && /[#&]s=/.test(location.hash);
+  var buttons = document.querySelectorAll('button.copy');
+  for (var i = 0; i < buttons.length; i++) {
+    var b = buttons[i];
+    if (!ok) continue;
+    b.hidden = false;
+    b.addEventListener('click', function(e){
+      var btn = e.currentTarget, done = btn.getAttribute('data-done'), label = btn.textContent;
+      function shown(){ btn.textContent = done; setTimeout(function(){ btn.textContent = label; }, 2500); }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(location.href).then(shown, function(){});
+      }
+    });
+  }
+  var notes = document.querySelectorAll('.nolink');
+  for (var j = 0; j < notes.length; j++) notes[j].hidden = ok;
+})();</script>
 </body>
 </html>
